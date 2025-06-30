@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Phone, Mail, Heart, Menu, X, ChevronDown, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,33 +41,35 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <div className="flex-shrink-0 flex items-center bg-blue-600 px-4 py-2 rounded">
-                <Heart className="h-6 w-6 text-white mr-2" />
-                <span className="text-lg font-bold text-white">Meditics</span>
-              </div>
+              <Link to="/">
+                <div className="flex-shrink-0 flex items-center bg-blue-600 px-4 py-2 rounded">
+                  <Heart className="h-6 w-6 text-white mr-2" />
+                  <span className="text-lg font-bold text-white">Meditics</span>
+                </div>
+              </Link>
               <div className="hidden md:ml-10 md:flex md:space-x-8">
                 <div className="relative group">
-                  <a href="#home" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                  <Link to="/" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
                     HOME <ChevronDown className="h-4 w-4 ml-1" />
-                  </a>
+                  </Link>
                 </div>
-                <a href="#about" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">ABOUT</a>
+                <Link to="/about" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">ABOUT</Link>
                 <div className="relative group">
-                  <a href="#services" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                  <Link to="/services" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
                     SERVICES <ChevronDown className="h-4 w-4 ml-1" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="relative group">
-                  <a href="#pages" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                  <Link to="/pages" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
                     PAGES <ChevronDown className="h-4 w-4 ml-1" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="relative group">
-                  <a href="#blog" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                  <Link to="/blog" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
                     BLOG <ChevronDown className="h-4 w-4 ml-1" />
-                  </a>
+                  </Link>
                 </div>
-                <a href="#contact" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">CONTACT</a>
+                <Link to="/contact" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">CONTACT</Link>
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-4">
@@ -93,12 +96,12 @@ const Navigation = () => {
         {mobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <a href="#home" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">HOME</a>
-              <a href="#about" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">ABOUT</a>
-              <a href="#services" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">SERVICES</a>
-              <a href="#pages" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">PAGES</a>
-              <a href="#blog" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">BLOG</a>
-              <a href="#contact" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">CONTACT</a>
+              <Link to="/" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">HOME</Link>
+              <Link to="/about" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">ABOUT</Link>
+              <Link to="/services" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">SERVICES</Link>
+              <Link to="/pages" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">PAGES</Link>
+              <Link to="/blog" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">BLOG</Link>
+              <Link to="/contact" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600">CONTACT</Link>
               <div className="px-3 py-2">
                 <Button className="w-full bg-green-500 hover:bg-green-600 text-white">BOOK A APPOINTMENT</Button>
               </div>
