@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 text-white overflow-hidden">
+    <section id="home" className="relative min-h-screen bg-gradient-to-r from-[#f4c2c2] via-[#f4c2c2] to-[#85211d] text-white overflow-hidden">
       {/* Background medical pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -28,14 +28,14 @@ const HeroSection = () => {
             </h1>
 
             {/* Description */}
-            <p className="text-lg text-pink-100 leading-relaxed max-w-lg">
+            <p className="text-lg text-[#fffdd0] leading-relaxed max-w-lg">
               To be a provider of high quality and accessible health care services, that meets the 
               needs of the communities we serve. Your trusted healthcare partner in Meduma.
             </p>
 
             {/* CTA Button */}
             <div className="pt-4">
-              <Button className="bg-white text-pink-600 hover:bg-pink-50 px-8 py-4 text-lg font-semibold rounded-none">
+              <Button className="bg-[#fffdd0] text-[#85211d] hover:bg-[#fffdd0]/90 px-8 py-4 text-lg font-semibold rounded-none">
                 Book Appointment →
               </Button>
             </div>
@@ -51,10 +51,10 @@ const HeroSection = () => {
             
             {/* Social Media Icons */}
             <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 bg-white/10 backdrop-blur-sm rounded-l-lg p-3">
-              <Facebook className="h-6 w-6 text-white hover:text-pink-200 cursor-pointer transition-colors" />
-              <Instagram className="h-6 w-6 text-white hover:text-pink-200 cursor-pointer transition-colors" />
-              <Youtube className="h-6 w-6 text-white hover:text-pink-200 cursor-pointer transition-colors" />
-              <Twitter className="h-6 w-6 text-white hover:text-pink-200 cursor-pointer transition-colors" />
+              <Facebook className="h-6 w-6 text-white hover:text-[#fffdd0] cursor-pointer transition-colors" />
+              <Instagram className="h-6 w-6 text-white hover:text-[#fffdd0] cursor-pointer transition-colors" />
+              <Youtube className="h-6 w-6 text-white hover:text-[#fffdd0] cursor-pointer transition-colors" />
+              <Twitter className="h-6 w-6 text-white hover:text-[#fffdd0] cursor-pointer transition-colors" />
             </div>
           </div>
         </div>

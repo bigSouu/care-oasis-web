@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <>
       {/* Top bar with contact info */}
-      <div className="bg-slate-800 text-white py-2 text-sm">
+      <div className="bg-[#85211d] text-white py-2 text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-6">
@@ -42,42 +42,42 @@ const Navigation = () => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link to="/">
-                <div className="flex-shrink-0 flex items-center bg-primary px-4 py-2 rounded">
-                  <Heart className="h-6 w-6 text-white mr-2" />
-                  <span className="text-lg font-bold text-white">Kaachire Clinic</span>
+                <div className="flex-shrink-0 flex items-center bg-[#f4c2c2] px-4 py-2 rounded">
+                  <Heart className="h-6 w-6 text-[#85211d] mr-2" />
+                  <span className="text-lg font-bold text-[#85211d]">Kaachire Clinic</span>
                 </div>
               </Link>
               <div className="hidden md:ml-10 md:flex md:space-x-8">
                 <div className="relative group">
-                  <Link to="/" className="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                  <Link to="/" className="text-gray-900 hover:text-[#85211d] px-3 py-2 text-sm font-medium transition-colors flex items-center">
                     HOME <ChevronDown className="h-4 w-4 ml-1" />
                   </Link>
                 </div>
-                <Link to="/about" className="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">ABOUT</Link>
+                <Link to="/about" className="text-gray-500 hover:text-[#85211d] px-3 py-2 text-sm font-medium transition-colors">ABOUT</Link>
                 <div className="relative group">
-                  <Link to="/services" className="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                  <Link to="/services" className="text-gray-500 hover:text-[#85211d] px-3 py-2 text-sm font-medium transition-colors flex items-center">
                     SERVICES <ChevronDown className="h-4 w-4 ml-1" />
                   </Link>
                 </div>
                 <div className="relative group">
-                  <Link to="/pages" className="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                  <Link to="/pages" className="text-gray-500 hover:text-[#85211d] px-3 py-2 text-sm font-medium transition-colors flex items-center">
                     PAGES <ChevronDown className="h-4 w-4 ml-1" />
                   </Link>
                 </div>
                 <div className="relative group">
-                  <Link to="/blog" className="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                  <Link to="/blog" className="text-gray-500 hover:text-[#85211d] px-3 py-2 text-sm font-medium transition-colors flex items-center">
                     BLOG <ChevronDown className="h-4 w-4 ml-1" />
                   </Link>
                 </div>
-                <Link to="/contact" className="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">CONTACT</Link>
+                <Link to="/contact" className="text-gray-500 hover:text-[#85211d] px-3 py-2 text-sm font-medium transition-colors">CONTACT</Link>
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-4">
-              <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-none">
+              <Button className="bg-[#fffdd0] hover:bg-[#fffdd0]/90 text-[#85211d] px-6 py-2 rounded-none">
                 BOOK APPOINTMENT →
               </Button>
-              <Search className="h-5 w-5 text-gray-600 cursor-pointer hover:text-primary" />
-              <button className="text-gray-600 hover:text-primary">
+              <Search className="h-5 w-5 text-gray-600 cursor-pointer hover:text-[#85211d]" />
+              <button className="text-gray-600 hover:text-[#85211d]">
                 <Menu className="h-6 w-6" />
               </button>
             </div>
@@ -96,14 +96,14 @@ const Navigation = () => {
         {mobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <Link to="/" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-primary">HOME</Link>
-              <Link to="/about" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-primary">ABOUT</Link>
-              <Link to="/services" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-primary">SERVICES</Link>
-              <Link to="/pages" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-primary">PAGES</Link>
-              <Link to="/blog" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-primary">BLOG</Link>
-              <Link to="/contact" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-primary">CONTACT</Link>
+              <Link to="/" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-[#85211d]">HOME</Link>
+              <Link to="/about" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-[#85211d]">ABOUT</Link>
+              <Link to="/services" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-[#85211d]">SERVICES</Link>
+              <Link to="/pages" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-[#85211d]">PAGES</Link>
+              <Link to="/blog" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-[#85211d]">BLOG</Link>
+              <Link to="/contact" className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-[#85211d]">CONTACT</Link>
               <div className="px-3 py-2">
-                <Button className="w-full bg-accent hover:bg-accent/90 text-white">BOOK APPOINTMENT</Button>
+                <Button className="w-full bg-[#fffdd0] hover:bg-[#fffdd0]/90 text-[#85211d]">BOOK APPOINTMENT</Button>
               </div>
             </div>
           </div>

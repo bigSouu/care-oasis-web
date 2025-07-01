@@ -18,61 +18,61 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 11% 15%;
 
-    --primary: 343 69% 65%;
+    --primary: 0 42% 72%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 343 20% 96%;
+    --secondary: 0 42% 92%;
     --secondary-foreground: 210 11% 15%;
 
-    --muted: 343 20% 96%;
+    --muted: 0 42% 92%;
     --muted-foreground: 210 11% 46%;
 
-    --accent: 197 71% 73%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 60 100% 91%;
+    --accent-foreground: 4 66% 24%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 343 20% 90%;
-    --input: 343 20% 90%;
-    --ring: 343 69% 65%;
+    --border: 0 42% 90%;
+    --input: 0 42% 90%;
+    --ring: 0 42% 72%;
 
     --radius: 0.5rem;
 
-    --medical-pink: 343 69% 65%;
-    --medical-blue: 197 71% 73%;
-    --medical-light: 343 20% 96%;
-    --medical-dark: 210 11% 15%;
+    --medical-primary: 0 42% 72%;
+    --medical-secondary: 4 66% 24%;
+    --medical-light: 60 100% 91%;
+    --medical-dark: 4 66% 24%;
   }
 
   .dark {
-    --background: 210 11% 15%;
+    --background: 4 66% 24%;
     --foreground: 0 0% 100%;
 
-    --card: 210 11% 15%;
+    --card: 4 66% 24%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 210 11% 15%;
+    --popover: 4 66% 24%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 343 69% 65%;
-    --primary-foreground: 210 11% 15%;
+    --primary: 0 42% 72%;
+    --primary-foreground: 4 66% 24%;
 
-    --secondary: 210 11% 20%;
+    --secondary: 4 66% 30%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 11% 20%;
+    --muted: 4 66% 30%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 197 71% 73%;
-    --accent-foreground: 210 11% 15%;
+    --accent: 60 100% 91%;
+    --accent-foreground: 4 66% 24%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 11% 20%;
-    --input: 210 11% 20%;
-    --ring: 343 69% 65%;
+    --border: 4 66% 30%;
+    --input: 4 66% 30%;
+    --ring: 0 42% 72%;
   }
 }
 
@@ -88,7 +88,7 @@ All colors MUST be HSL.
 
 /* Medical themed utilities */
 .medical-gradient {
-  background: linear-gradient(135deg, hsl(var(--medical-pink)), hsl(var(--medical-blue)));
+  background: linear-gradient(135deg, #f4c2c2, #85211d);
 }
 
 .medical-card {
