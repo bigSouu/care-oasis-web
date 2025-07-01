@@ -1,60 +1,122 @@
 
-import { Heart, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import { Heart, Facebook, Instagram, Youtube, Twitter, Shield, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-r from-[#f4c2c2] via-[#f4c2c2] to-[#85211d] text-white overflow-hidden">
-      {/* Background medical pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30h30v30H30V30zm15 15h15v15H45V45z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}></div>
+    <section id="home" className="relative min-h-screen clinic-gradient text-white overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 animate-float">
+          <Heart className="h-8 w-8 text-white" />
+        </div>
+        <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '2s' }}>
+          <Shield className="h-6 w-6 text-white" />
+        </div>
+        <div className="absolute bottom-40 left-20 animate-float" style={{ animationDelay: '4s' }}>
+          <Award className="h-10 w-10 text-white" />
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          <div className="space-y-8">
-            {/* Heart Icon and Tagline */}
-            <div className="flex items-center space-x-2">
-              <Heart className="h-5 w-5 text-white fill-current" />
-              <span className="text-white font-medium text-sm uppercase tracking-wide">HIGH QUALITY ACCESSIBLE HEALTHCARE</span>
+          <div className="space-y-8 animate-slide-in">
+            {/* Professional Badge */}
+            <div className="glass-effect rounded-full px-6 py-3 inline-flex items-center space-x-3 animate-scale-in">
+              <Heart className="h-5 w-5 text-[#fffdd0] fill-current animate-pulse" />
+              <span className="text-[#fffdd0] font-bold text-sm uppercase tracking-wider">NHIS Accredited Healthcare Provider</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Kaachire Clinic
-              <span className="block text-4xl lg:text-5xl">Quality Healthcare Services</span>
-            </h1>
+            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-4">
+                <span className="text-gradient bg-gradient-to-r from-white to-[#fffdd0] bg-clip-text text-transparent">
+                  Kaachire
+                </span>
+                <span className="block text-5xl lg:text-6xl text-[#fffdd0] mt-2">
+                  Medical Center
+                </span>
+              </h1>
+              <p className="text-xl font-medium text-[#fffdd0]/90 mb-2">
+                Quality Healthcare Services Since 2011
+              </p>
+            </div>
 
-            {/* Description */}
-            <p className="text-lg text-[#fffdd0] leading-relaxed max-w-lg">
-              To be a provider of high quality and accessible health care services, that meets the 
-              needs of the communities we serve. Your trusted healthcare partner in Meduma.
-            </p>
+            {/* Professional Description */}
+            <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <p className="text-lg text-white/90 leading-relaxed max-w-xl mb-6">
+                Providing high quality and accessible healthcare services to the Meduma community. 
+                Your trusted partner in health with professional medical care and state-of-the-art facilities.
+              </p>
+              
+              {/* Professional stats */}
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="text-center glass-effect rounded-xl p-4">
+                  <div className="text-2xl font-bold text-[#fffdd0]">13+</div>
+                  <div className="text-sm text-white/80">Years Experience</div>
+                </div>
+                <div className="text-center glass-effect rounded-xl p-4">
+                  <div className="text-2xl font-bold text-[#fffdd0]">22</div>
+                  <div className="text-sm text-white/80">Medical Staff</div>
+                </div>
+                <div className="text-center glass-effect rounded-xl p-4">
+                  <div className="text-2xl font-bold text-[#fffdd0]">24/7</div>
+                  <div className="text-sm text-white/80">Emergency Care</div>
+                </div>
+              </div>
+            </div>
 
-            {/* CTA Button */}
-            <div className="pt-4">
-              <Button className="bg-[#fffdd0] text-[#85211d] hover:bg-[#fffdd0]/90 px-8 py-4 text-lg font-semibold rounded-none">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <Button className="bg-[#fffdd0] hover:bg-white text-[#85211d] px-8 py-4 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
                 Book Appointment →
               </Button>
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#85211d] px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
+                Emergency Services
+              </Button>
+            </div>
+
+            {/* Doctor Info */}
+            <div className="glass-effect rounded-2xl p-6 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+              <p className="text-[#fffdd0] font-semibold mb-1">Medical Director</p>
+              <p className="text-white text-lg font-bold">Dr. Ernest Anim Boateng</p>
+              <p className="text-white/80 text-sm">MD, MPH - Board Certified</p>
             </div>
           </div>
 
-          {/* Doctors Image */}
-          <div className="relative">
-            <img
-              src="/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
-              alt="Professional healthcare team at Kaachire Clinic"
-              className="w-full h-auto max-w-2xl mx-auto"
-            />
+          {/* Enhanced Image Section */}
+          <div className="relative animate-scale-in" style={{ animationDelay: '0.6s' }}>
+            <div className="relative">
+              {/* Decorative background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#fffdd0]/20 to-transparent rounded-3xl transform rotate-6"></div>
+              <div className="absolute inset-0 bg-gradient-to-tl from-white/10 to-transparent rounded-3xl transform -rotate-3"></div>
+              
+              <img
+                src="/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
+                alt="Professional healthcare team at Kaachire Clinic"
+                className="relative w-full h-auto max-w-2xl mx-auto rounded-3xl shadow-2xl animate-float"
+              />
+            </div>
             
-            {/* Social Media Icons */}
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 bg-white/10 backdrop-blur-sm rounded-l-lg p-3">
-              <Facebook className="h-6 w-6 text-white hover:text-[#fffdd0] cursor-pointer transition-colors" />
-              <Instagram className="h-6 w-6 text-white hover:text-[#fffdd0] cursor-pointer transition-colors" />
-              <Youtube className="h-6 w-6 text-white hover:text-[#fffdd0] cursor-pointer transition-colors" />
-              <Twitter className="h-6 w-6 text-white hover:text-[#fffdd0] cursor-pointer transition-colors" />
+            {/* Enhanced Social Media Icons */}
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 space-y-4">
+              <div className="glass-effect rounded-2xl p-4 space-y-4 animate-slide-in stagger-animation">
+                <Facebook className="h-7 w-7 text-white hover:text-[#fffdd0] cursor-pointer transition-all duration-300 hover:scale-125" />
+                <Instagram className="h-7 w-7 text-white hover:text-[#fffdd0] cursor-pointer transition-all duration-300 hover:scale-125" />
+                <Youtube className="h-7 w-7 text-white hover:text-[#fffdd0] cursor-pointer transition-all duration-300 hover:scale-125" />
+                <Twitter className="h-7 w-7 text-white hover:text-[#fffdd0] cursor-pointer transition-all duration-300 hover:scale-125" />
+              </div>
+            </div>
+
+            {/* Professional badges */}
+            <div className="absolute bottom-8 left-8 glass-effect rounded-2xl p-4 animate-pulse-slow">
+              <div className="flex items-center space-x-2">
+                <Shield className="h-6 w-6 text-[#fffdd0]" />
+                <div>
+                  <p className="text-white font-semibold text-sm">NHIS Accredited</p>
+                  <p className="text-white/80 text-xs">Certified Healthcare Provider</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

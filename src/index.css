@@ -21,8 +21,8 @@ All colors MUST be HSL.
     --primary: 0 42% 72%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 42% 92%;
-    --secondary-foreground: 210 11% 15%;
+    --secondary: 4 66% 24%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 0 42% 92%;
     --muted-foreground: 210 11% 46%;
@@ -39,10 +39,10 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    --medical-primary: 0 42% 72%;
-    --medical-secondary: 4 66% 24%;
-    --medical-light: 60 100% 91%;
-    --medical-dark: 4 66% 24%;
+    /* Kaachire Clinic Custom Colors */
+    --clinic-primary: 0 42% 72%;    /* #f4c2c2 */
+    --clinic-secondary: 4 66% 24%;  /* #85211d */
+    --clinic-accent: 60 100% 91%;   /* #fffdd0 */
   }
 
   .dark {
@@ -86,11 +86,88 @@ All colors MUST be HSL.
   }
 }
 
-/* Medical themed utilities */
-.medical-gradient {
-  background: linear-gradient(135deg, #f4c2c2, #85211d);
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.medical-card {
-  @apply bg-white shadow-lg rounded-lg border border-gray-100 hover:shadow-xl transition-all duration-300;
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Professional Medical themed utilities */
+.clinic-gradient {
+  background: linear-gradient(135deg, #f4c2c2 0%, #85211d 100%);
+}
+
+.clinic-card {
+  @apply bg-white shadow-xl rounded-2xl border border-[#f4c2c2]/20 hover:shadow-2xl transition-all duration-500 hover:border-[#f4c2c2]/40;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.clinic-card:hover {
+  transform: translateY(-5px);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.stagger-animation > * {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Professional text effects */
+.text-gradient {
+  background: linear-gradient(135deg, #85211d, #f4c2c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism effect */
+.glass-effect {
+  background: rgba(244, 194, 194, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(244, 194, 194, 0.2);
 }
