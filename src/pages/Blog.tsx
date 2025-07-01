@@ -67,11 +67,11 @@ const Blog = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-600 to-indigo-800 text-white py-20">
+      <section className="clinic-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center animate-fade-in">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">Health Blog</h1>
-            <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Stay informed with the latest health news, medical insights, and expert advice 
               from our team of healthcare professionals.
             </p>
@@ -82,7 +82,7 @@ const Blog = () => {
       {/* Featured Post */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+          <div className="clinic-card overflow-hidden animate-fade-in">
             <div className="lg:flex">
               <div className="lg:w-1/2">
                 <img
@@ -93,8 +93,8 @@ const Blog = () => {
               </div>
               <div className="lg:w-1/2 p-8">
                 <div className="flex items-center mb-4">
-                  <Tag className="h-4 w-4 text-indigo-600 mr-2" />
-                  <span className="text-indigo-600 font-medium">{blogPosts[0].category}</span>
+                  <Tag className="h-4 w-4 text-[#85211d] mr-2" />
+                  <span className="text-[#85211d] font-medium">{blogPosts[0].category}</span>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">{blogPosts[0].title}</h2>
                 <p className="text-gray-600 mb-6">{blogPosts[0].excerpt}</p>
@@ -114,7 +114,7 @@ const Blog = () => {
                     </div>
                   </div>
                 </div>
-                <Button className="bg-indigo-600 hover:bg-indigo-700">
+                <Button className="bg-[#85211d] hover:bg-[#f4c2c2] hover:text-[#85211d] transition-all duration-300">
                   Read Full Article
                 </Button>
               </div>
@@ -124,15 +124,15 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-[#f4c2c2]/10 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
             <p className="text-lg text-gray-600">Expert insights on health and wellness</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
             {blogPosts.slice(1).map((post, index) => (
-              <article key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <article key={index} className="clinic-card overflow-hidden hover:shadow-xl transition-shadow">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -140,8 +140,8 @@ const Blog = () => {
                 />
                 <div className="p-6">
                   <div className="flex items-center mb-3">
-                    <Tag className="h-4 w-4 text-indigo-600 mr-2" />
-                    <span className="text-indigo-600 font-medium text-sm">{post.category}</span>
+                    <Tag className="h-4 w-4 text-[#85211d] mr-2" />
+                    <span className="text-[#85211d] font-medium text-sm">{post.category}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{post.title}</h3>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
@@ -155,7 +155,7 @@ const Blog = () => {
                       {post.readTime}
                     </div>
                   </div>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-[#85211d] text-[#85211d] hover:bg-[#85211d] hover:text-white">
                     Read More
                   </Button>
                 </div>
