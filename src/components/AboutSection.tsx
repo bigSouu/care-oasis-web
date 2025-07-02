@@ -1,6 +1,7 @@
 
 import { Award, Shield, Users, Heart, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -45,9 +46,11 @@ const AboutSection = () => {
               <Button className="bg-gradient-to-r from-[#f4c2c2] to-[#85211d] hover:from-[#85211d] hover:to-[#f4c2c2] text-white px-8 py-4 text-lg font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 Learn More About Us
               </Button>
-              <Button variant="outline" className="border-2 border-[#85211d] text-[#85211d] hover:bg-[#85211d] hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
-                Book Appointment
-              </Button>
+              <Link to="/book-appointment">
+                <Button variant="outline" className="border-2 border-[#85211d] text-[#85211d] hover:bg-[#85211d] hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
+                  Book Appointment
+                </Button>
+              </Link>
             </div>
           </div>
           

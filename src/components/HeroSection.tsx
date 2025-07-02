@@ -1,6 +1,6 @@
-
 import { Heart, Facebook, Instagram, Youtube, Twitter, Shield, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -68,9 +68,11 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-              <Button className="bg-white hover:bg-white/90 text-[#85211d] px-8 py-4 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
-                Book Appointment →
-              </Button>
+              <Link to="/book-appointment">
+                <Button className="bg-white hover:bg-white/90 text-[#85211d] px-8 py-4 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+                  Book Appointment →
+                </Button>
+              </Link>
               <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#85211d] px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
                 Emergency Services
               </Button>

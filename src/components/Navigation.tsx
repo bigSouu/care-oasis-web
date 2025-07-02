@@ -72,9 +72,11 @@ const Navigation = () => {
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-4">
-              <Button className="bg-gradient-to-r from-[#fffdd0] to-[#f4c2c2] hover:from-[#f4c2c2] hover:to-[#fffdd0] text-[#85211d] px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                BOOK APPOINTMENT →
-              </Button>
+              <Link to="/book-appointment">
+                <Button className="bg-gradient-to-r from-[#fffdd0] to-[#f4c2c2] hover:from-[#f4c2c2] hover:to-[#fffdd0] text-[#85211d] px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  BOOK APPOINTMENT →
+                </Button>
+              </Link>
               <Search className="h-6 w-6 text-gray-600 cursor-pointer hover:text-[#85211d] transition-colors hover:scale-110 transform duration-200" />
             </div>
             <div className="md:hidden flex items-center">
@@ -99,7 +101,9 @@ const Navigation = () => {
               <Link to="/blog" className="block px-4 py-3 text-base font-semibold text-gray-600 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">BLOG</Link>
               <Link to="/contact" className="block px-4 py-3 text-base font-semibold text-gray-600 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">CONTACT</Link>
               <div className="px-4 py-3">
-                <Button className="w-full bg-gradient-to-r from-[#fffdd0] to-[#f4c2c2] text-[#85211d] font-bold py-3 rounded-full">BOOK APPOINTMENT</Button>
+                <Link to="/book-appointment">
+                  <Button className="w-full bg-gradient-to-r from-[#fffdd0] to-[#f4c2c2] text-[#85211d] font-bold py-3 rounded-full">BOOK APPOINTMENT</Button>
+                </Link>
               </div>
             </div>
           </div>
