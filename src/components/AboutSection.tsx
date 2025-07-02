@@ -59,7 +59,7 @@ const AboutSection = () => {
               
               <img
                 src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=600&h=400&fit=crop"
-                alt="Medical team collaboration at Kaachire Clinic"
+                alt="Medical team collaboration at Kaachire Medical Center"
                 className="rounded-3xl shadow-2xl w-full h-auto clinic-card"
               />
               

@@ -92,8 +92,8 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-tl from-white/10 to-transparent rounded-3xl transform -rotate-3"></div>
               
               <img
-                src="/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
-                alt="Professional healthcare team at Kaachire Clinic"
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&h=600&fit=crop"
+                alt="Professional medical team at Kaachire Medical Center"
                 className="relative w-full h-auto max-w-2xl mx-auto rounded-3xl shadow-2xl animate-float"
               />
             </div>

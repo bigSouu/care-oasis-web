@@ -2,9 +2,29 @@
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { doctors } from "@/data/hospitalData";
 
 const DoctorsSection = () => {
+  const doctors = [
+    {
+      name: "Dr. Ernest Anim Boateng",
+      specialty: "Medical Director",
+      experience: "MD, MPH - 15+ years experience",
+      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Dr. Sarah Mensah",
+      specialty: "Pediatrician",
+      experience: "Specialist in Child Healthcare - 8+ years",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Dr. Michael Asante",
+      specialty: "General Practitioner",
+      experience: "Primary Care Specialist - 10+ years",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face"
+    }
+  ];
+
   return (
     <section id="doctors" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

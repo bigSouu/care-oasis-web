@@ -13,7 +13,7 @@ const Blog = () => {
       date: "March 15, 2024",
       category: "Cardiology",
       readTime: "5 min read",
-      image: "/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop"
     },
     {
       title: "Understanding Mental Health in Modern Times",
@@ -22,7 +22,7 @@ const Blog = () => {
       date: "March 12, 2024",
       category: "Mental Health",
       readTime: "7 min read",
-      image: "/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop"
     },
     {
       title: "The Future of Telemedicine",
@@ -31,7 +31,7 @@ const Blog = () => {
       date: "March 8, 2024",
       category: "Technology",
       readTime: "6 min read",
-      image: "/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop"
     },
     {
       title: "Nutrition Guidelines for Healthy Living",
@@ -40,7 +40,7 @@ const Blog = () => {
       date: "March 5, 2024",
       category: "Nutrition",
       readTime: "8 min read",
-      image: "/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
+      image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop"
     },
     {
       title: "Preventive Care: Your First Line of Defense",
@@ -49,7 +49,7 @@ const Blog = () => {
       date: "March 1, 2024",
       category: "Preventive Care",
       readTime: "5 min read",
-      image: "/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop"
     },
     {
       title: "Managing Chronic Conditions Effectively",
@@ -58,7 +58,7 @@ const Blog = () => {
       date: "February 28, 2024",
       category: "Chronic Care",
       readTime: "9 min read",
-      image: "/lovable-uploads/43101139-05e6-4e6a-b133-9baefdf6b6c0.png"
+      image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop"
     }
   ];
 
