@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { FileText, Calendar, Users, MapPin, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Pages = () => {
   const pageLinks = [
@@ -10,37 +11,43 @@ const Pages = () => {
       icon: Calendar,
       title: "Appointments",
       description: "Schedule, reschedule, or cancel your medical appointments online.",
-      link: "Book Now"
+      link: "Book Now",
+      path: "/book-appointment"
     },
     {
       icon: Users,
       title: "Find a Doctor",
       description: "Search our directory of experienced healthcare professionals.",
-      link: "Search Doctors"
+      link: "Search Doctors",
+      path: "/about"
     },
     {
       icon: MapPin,
       title: "Locations",
       description: "Find our hospital locations and get directions.",
-      link: "View Locations"
+      link: "View Locations",
+      path: "/contact"
     },
     {
       icon: FileText,
       title: "Patient Portal",
       description: "Access your medical records, test results, and billing information.",
-      link: "Login Portal"
+      link: "Login Portal",
+      path: "/contact"
     },
     {
       icon: Clock,
       title: "Emergency Care",
       description: "24/7 emergency services and urgent care information.",
-      link: "Emergency Info"
+      link: "Emergency Info",
+      path: "/services"
     },
     {
       icon: Phone,
       title: "Contact Us",
       description: "Get in touch with our patient support team.",
-      link: "Contact Now"
+      link: "Contact Now",
+      path: "/contact"
     }
   ];
 
@@ -76,9 +83,11 @@ const Pages = () => {
                   <h3 className="text-xl font-semibold text-gray-900">{page.title}</h3>
                 </div>
                 <p className="text-gray-600 mb-6">{page.description}</p>
-                <Button className="w-full bg-[#85211d] hover:bg-[#f4c2c2] hover:text-[#85211d] transition-all duration-300">
-                  {page.link}
-                </Button>
+                <Link to={page.path}>
+                  <Button className="w-full bg-[#85211d] hover:bg-[#f4c2c2] hover:text-[#85211d] transition-all duration-300">
+                    {page.link}
+                  </Button>
+                </Link>
               </div>
             ))}
           </div>
@@ -99,9 +108,11 @@ const Pages = () => {
                 <li>• Discharge Planning</li>
                 <li>• Medical Records Request</li>
               </ul>
-              <Button className="mt-6 bg-[#85211d] hover:bg-[#f4c2c2] hover:text-[#85211d] transition-all duration-300">
-                View All Resources
-              </Button>
+              <Link to="/contact">
+                <Button className="mt-6 bg-[#85211d] hover:bg-[#f4c2c2] hover:text-[#85211d] transition-all duration-300">
+                  View All Resources
+                </Button>
+              </Link>
             </div>
             <div className="clinic-card p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Hospital Information</h3>
@@ -113,9 +124,11 @@ const Pages = () => {
                 <li>• Volunteer Opportunities</li>
                 <li>• Career Opportunities</li>
               </ul>
-              <Button className="mt-6 bg-[#f4c2c2] hover:bg-[#85211d] text-[#85211d] hover:text-white transition-all duration-300">
-                Learn More
-              </Button>
+              <Link to="/about">
+                <Button className="mt-6 bg-[#f4c2c2] hover:bg-[#85211d] text-[#85211d] hover:text-white transition-all duration-300">
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

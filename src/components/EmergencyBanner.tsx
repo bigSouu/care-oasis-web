@@ -1,5 +1,6 @@
 
 import { Clock, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const EmergencyBanner = () => {
   return (
@@ -11,14 +12,14 @@ const EmergencyBanner = () => {
             <span className="font-semibold">24/7 Emergency Services Available</span>
           </div>
           <div className="flex items-center space-x-6">
-            <div className="flex items-center">
+            <Link to="/contact" className="flex items-center hover:text-red-200 transition-colors">
               <Phone className="h-4 w-4 mr-1" />
-              <span className="font-bold">Emergency: (555) 911-HELP</span>
-            </div>
-            <div className="flex items-center">
+              <span className="font-bold">Emergency: 0558727124</span>
+            </Link>
+            <Link to="/contact" className="flex items-center hover:text-red-200 transition-colors">
               <MapPin className="h-4 w-4 mr-1" />
-              <span>123 Medical Center Dr</span>
-            </div>
+              <span>Meduma, Ghana</span>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+
 import { Heart, Facebook, Instagram, Youtube, Twitter, Shield, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -73,9 +74,11 @@ const HeroSection = () => {
                   Book Appointment →
                 </Button>
               </Link>
-              <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#85211d] px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
-                Emergency Services
-              </Button>
+              <Link to="/services">
+                <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#85211d] px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
+                  Emergency Services
+                </Button>
+              </Link>
             </div>
 
             {/* Doctor Info */}

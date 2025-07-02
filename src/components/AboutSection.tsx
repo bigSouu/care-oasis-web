@@ -43,9 +43,11 @@ const AboutSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-gradient-to-r from-[#f4c2c2] to-[#85211d] hover:from-[#85211d] hover:to-[#f4c2c2] text-white px-8 py-4 text-lg font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Learn More About Us
-              </Button>
+              <Link to="/about">
+                <Button className="bg-gradient-to-r from-[#f4c2c2] to-[#85211d] hover:from-[#85211d] hover:to-[#f4c2c2] text-white px-8 py-4 text-lg font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  Learn More About Us
+                </Button>
+              </Link>
               <Link to="/book-appointment">
                 <Button variant="outline" className="border-2 border-[#85211d] text-[#85211d] hover:bg-[#85211d] hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
                   Book Appointment

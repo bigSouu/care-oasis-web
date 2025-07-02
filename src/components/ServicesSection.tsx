@@ -2,6 +2,7 @@
 import { ChevronRight, Stethoscope, Heart, Baby, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
@@ -62,9 +63,11 @@ const ServicesSection = () => {
                 <CardDescription className="text-gray-600 text-base leading-relaxed mb-6">
                   {service.description}
                 </CardDescription>
-                <Button variant="ghost" className="text-[#85211d] hover:text-white hover:bg-[#85211d] font-semibold rounded-full px-6 py-2 transition-all duration-300 group-hover:shadow-lg">
-                  Learn More <ChevronRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to="/services">
+                  <Button variant="ghost" className="text-[#85211d] hover:text-white hover:bg-[#85211d] font-semibold rounded-full px-6 py-2 transition-all duration-300 group-hover:shadow-lg">
+                    Learn More <ChevronRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
@@ -78,12 +81,16 @@ const ServicesSection = () => {
               Our experienced medical team is ready to provide you with quality healthcare services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-[#f4c2c2] to-[#85211d] hover:from-[#85211d] hover:to-[#f4c2c2] text-white px-10 py-4 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
-                Book Appointment Now
-              </Button>
-              <Button variant="outline" className="border-2 border-[#85211d] text-[#85211d] hover:bg-[#85211d] hover:text-white px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300">
-                Contact Us
-              </Button>
+              <Link to="/book-appointment">
+                <Button className="bg-gradient-to-r from-[#f4c2c2] to-[#85211d] hover:from-[#85211d] hover:to-[#f4c2c2] text-white px-10 py-4 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+                  Book Appointment Now
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" className="border-2 border-[#85211d] text-[#85211d] hover:bg-[#85211d] hover:text-white px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
