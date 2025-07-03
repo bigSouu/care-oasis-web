@@ -3,8 +3,76 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock, MessageSquare, Calendar, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    serviceInquiry: "General Inquiry",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone || null,
+          service_inquiry: formData.serviceInquiry,
+          message: formData.message,
+        });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We will get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        serviceInquiry: "General Inquiry",
+        message: ""
+      });
+      
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Message Failed",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -87,7 +155,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="glass-effect rounded-lg p-8 animate-scale-in">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -95,6 +163,10 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-2 border border-[#f4c2c2] rounded-md focus:ring-[#85211d] focus:border-[#85211d]"
                       placeholder="John"
                     />
@@ -105,6 +177,10 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-2 border border-[#f4c2c2] rounded-md focus:ring-[#85211d] focus:border-[#85211d]"
                       placeholder="Doe"
                     />
@@ -116,6 +192,10 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-4 py-2 border border-[#f4c2c2] rounded-md focus:ring-[#85211d] focus:border-[#85211d]"
                     placeholder="john.doe@example.com"
                   />
@@ -126,6 +206,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-2 border border-[#f4c2c2] rounded-md focus:ring-[#85211d] focus:border-[#85211d]"
                     placeholder="+233 55 123 4567"
                   />
@@ -134,7 +217,12 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Service Inquiry
                   </label>
-                  <select className="w-full px-4 py-2 border border-[#f4c2c2] rounded-md focus:ring-[#85211d] focus:border-[#85211d]">
+                  <select 
+                    name="serviceInquiry"
+                    value={formData.serviceInquiry}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 border border-[#f4c2c2] rounded-md focus:ring-[#85211d] focus:border-[#85211d]"
+                  >
                     <option>General Inquiry</option>
                     <option>Appointment Request</option>
                     <option>Maternal Care</option>
@@ -149,13 +237,21 @@ const Contact = () => {
                     Message
                   </label>
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
                     rows={4}
                     className="w-full px-4 py-2 border border-[#f4c2c2] rounded-md focus:ring-[#85211d] focus:border-[#85211d]"
                     placeholder="Please describe how we can help you..."
                   ></textarea>
                 </div>
-                <Button className="w-full bg-[#85211d] hover:bg-[#f4c2c2] hover:text-[#85211d] text-white transition-all duration-300">
-                  Send Message
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#85211d] hover:bg-[#f4c2c2] hover:text-[#85211d] text-white transition-all duration-300"
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>

@@ -11,10 +11,14 @@ import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const BookAppointment = () => {
   const [date, setDate] = useState<Date>();
   const [selectedTime, setSelectedTime] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -37,11 +41,65 @@ const BookAppointment = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Appointment booking:", { ...formData, date, selectedTime });
-    alert("Appointment booking submitted! We will contact you to confirm your appointment.");
+    
+    if (!date || !selectedTime) {
+      toast({
+        title: "Missing Information",
+        description: "Please select both a date and time for your appointment.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from('appointments')
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          preferred_date: format(date, 'yyyy-MM-dd'),
+          preferred_time: selectedTime,
+          reason_for_visit: formData.reason,
+          additional_notes: formData.notes || null,
+        });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Appointment Booked!",
+        description: "Your appointment request has been submitted successfully. We will contact you to confirm your appointment.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        reason: "",
+        notes: ""
+      });
+      setDate(undefined);
+      setSelectedTime("");
+      
+    } catch (error) {
+      console.error('Error booking appointment:', error);
+      toast({
+        title: "Booking Failed",
+        description: "There was an error booking your appointment. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -259,9 +317,10 @@ const BookAppointment = () => {
                     {/* Submit Button */}
                     <Button
                       type="submit"
+                      disabled={isSubmitting}
                       className="w-full bg-gradient-to-r from-[#85211d] to-[#f4c2c2] hover:from-[#f4c2c2] hover:to-[#85211d] text-white py-3 text-lg font-semibold"
                     >
-                      Book Appointment
+                      {isSubmitting ? "Booking..." : "Book Appointment"}
                     </Button>
                   </form>
                 </CardContent>
