@@ -18,16 +18,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 11% 15%;
 
-    --primary: 0 42% 72%;
+    --primary: 4 66% 24%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 4 66% 24%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 42% 72%;
+    --secondary-foreground: 210 11% 15%;
 
     --muted: 0 42% 92%;
-    --muted-foreground: 210 11% 46%;
+    --muted-foreground: 210 11% 25%;
 
-    --accent: 60 100% 91%;
+    --accent: 60 100% 80%;
     --accent-foreground: 4 66% 24%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,14 +35,14 @@ All colors MUST be HSL.
 
     --border: 0 42% 90%;
     --input: 0 42% 90%;
-    --ring: 0 42% 72%;
+    --ring: 4 66% 24%;
 
     --radius: 0.5rem;
 
     /* Kaachire Clinic Custom Colors */
-    --clinic-primary: 0 42% 72%;    /* #f4c2c2 */
-    --clinic-secondary: 4 66% 24%;  /* #85211d */
-    --clinic-accent: 60 100% 91%;   /* #fffdd0 */
+    --clinic-primary: 4 66% 24%;    /* #85211d - darker for better contrast */
+    --clinic-secondary: 0 42% 72%;  /* #f4c2c2 */
+    --clinic-accent: 60 100% 80%;   /* #fff3a0 - darker yellow for better contrast */
   }
 
   .dark {
@@ -64,7 +64,7 @@ All colors MUST be HSL.
     --muted: 4 66% 30%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 60 100% 91%;
+    --accent: 60 100% 80%;
     --accent-foreground: 4 66% 24%;
 
     --destructive: 0 62.8% 30.6%;
@@ -83,6 +83,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
+    color: hsl(210 11% 15%); /* Darker text for better contrast */
   }
 }
 
@@ -114,12 +115,13 @@ All colors MUST be HSL.
 
 /* Professional Medical themed utilities */
 .clinic-gradient {
-  background: linear-gradient(135deg, #f4c2c2 0%, #85211d 100%);
+  background: linear-gradient(135deg, #85211d 0%, #f4c2c2 100%);
 }
 
 .clinic-card {
   @apply bg-white shadow-xl rounded-2xl border border-[#f4c2c2]/20 hover:shadow-2xl transition-all duration-500 hover:border-[#f4c2c2]/40;
   animation: fadeIn 0.6s ease-out;
+  color: hsl(210 11% 15%); /* Ensure dark text in cards */
 }
 
 .clinic-card:hover {
