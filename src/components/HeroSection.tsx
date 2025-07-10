@@ -1,20 +1,21 @@
-
 import { Heart, Facebook, Instagram, Youtube, Twitter, Shield, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const HeroSection = () => {
-  return (
-    <section id="home" className="relative min-h-screen clinic-gradient text-white overflow-hidden">
+  return <section id="home" className="relative min-h-screen clinic-gradient text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 animate-float">
           <Heart className="h-8 w-8 text-white" />
         </div>
-        <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '2s' }}>
+        <div className="absolute top-40 right-20 animate-float" style={{
+        animationDelay: '2s'
+      }}>
           <Shield className="h-6 w-6 text-white" />
         </div>
-        <div className="absolute bottom-40 left-20 animate-float" style={{ animationDelay: '4s' }}>
+        <div className="absolute bottom-40 left-20 animate-float" style={{
+        animationDelay: '4s'
+      }}>
           <Award className="h-10 w-10 text-white" />
         </div>
       </div>
@@ -29,7 +30,9 @@ const HeroSection = () => {
             </div>
 
             {/* Main Heading */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
               <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-4">
                 <span className="text-white drop-shadow-2xl">
                   Kaachire
@@ -44,7 +47,9 @@ const HeroSection = () => {
             </div>
 
             {/* Professional Description */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="animate-fade-in" style={{
+            animationDelay: '0.6s'
+          }}>
               <p className="text-lg text-white/95 leading-relaxed max-w-xl mb-6 drop-shadow-md bg-black/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                 Providing high quality and accessible healthcare services to the Meduma community. 
                 Your trusted partner in health with professional medical care and state-of-the-art facilities.
@@ -68,7 +73,9 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{
+            animationDelay: '0.9s'
+          }}>
               <Link to="/book-appointment">
                 <Button className="bg-white hover:bg-white/90 text-[#85211d] px-8 py-4 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
                   Book Appointment →
@@ -82,7 +89,9 @@ const HeroSection = () => {
             </div>
 
             {/* Doctor Info */}
-            <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 animate-fade-in border border-white/30" style={{ animationDelay: '1.2s' }}>
+            <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 animate-fade-in border border-white/30" style={{
+            animationDelay: '1.2s'
+          }}>
               <p className="text-white font-semibold mb-1 drop-shadow-sm">Medical Director</p>
               <p className="text-white text-lg font-bold drop-shadow-sm">Dr. Ernest Anim Boateng</p>
               <p className="text-white/90 text-sm drop-shadow-sm">MD, MPH - Board Certified</p>
@@ -90,17 +99,15 @@ const HeroSection = () => {
           </div>
 
           {/* Enhanced Image Section */}
-          <div className="relative animate-scale-in" style={{ animationDelay: '0.6s' }}>
+          <div className="relative animate-scale-in" style={{
+          animationDelay: '0.6s'
+        }}>
             <div className="relative">
               {/* Decorative background */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl transform rotate-6"></div>
               <div className="absolute inset-0 bg-gradient-to-tl from-white/10 to-transparent rounded-3xl transform -rotate-3"></div>
               
-              <img
-                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&h=600&fit=crop"
-                alt="Professional medical team at Kaachire Medical Center"
-                className="relative w-full h-auto max-w-2xl mx-auto rounded-3xl shadow-2xl animate-float"
-              />
+              <img alt="Professional medical team at Kaachire Medical Center" className="relative w-full h-auto max-w-2xl mx-auto rounded-3xl shadow-2xl animate-float" src="/lovable-uploads/1ba564e1-25e0-4618-83f4-cdb5e3d83c4c.jpg" />
             </div>
             
             {/* Enhanced Social Media Icons */}
@@ -126,8 +133,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

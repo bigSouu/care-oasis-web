@@ -1,15 +1,11 @@
-
 import { useState } from "react";
 import { Phone, Mail, Menu, X, ChevronDown, Search, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
-
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  return (
-    <>
+  return <>
       {/* Top bar with contact info */}
       <div className="bg-[#85211d] text-white py-3 text-sm animate-slide-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,17 +69,14 @@ const Navigation = () => {
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <Link to="/book-appointment">
-                <Button className="bg-gradient-to-r from-[#fffdd0] to-[#f4c2c2] hover:from-[#f4c2c2] hover:to-[#fffdd0] text-[#85211d] px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Button className="bg-gradient-to-r from-[#fffdd0] to-[#f4c2c2] hover:from-[#f4c2c2] hover:to-[#fffdd0] px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-red-900 hover:bg-red-800 text-red-950">
                   BOOK APPOINTMENT →
                 </Button>
               </Link>
               <Search className="h-6 w-6 text-gray-600 cursor-pointer hover:text-[#85211d] transition-colors hover:scale-110 transform duration-200" />
             </div>
             <div className="md:hidden flex items-center">
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-gray-600 hover:text-[#85211d] transition-colors"
-              >
+              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-600 hover:text-[#85211d] transition-colors">
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
@@ -91,8 +84,7 @@ const Navigation = () => {
         </div>
         
         {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden animate-slide-in">
+        {mobileMenuOpen && <div className="md:hidden animate-slide-in">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-[#f4c2c2] shadow-lg">
               <Link to="/" className="block px-4 py-3 text-base font-semibold text-gray-700 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">HOME</Link>
               <Link to="/about" className="block px-4 py-3 text-base font-semibold text-gray-600 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">ABOUT</Link>
@@ -106,11 +98,8 @@ const Navigation = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        )}
+          </div>}
       </nav>
-    </>
-  );
+    </>;
 };
-
 export default Navigation;
