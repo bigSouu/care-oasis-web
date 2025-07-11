@@ -10,39 +10,39 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 11% 15%;
+    --foreground: 210 11% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 11% 15%;
+    --card-foreground: 210 11% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 11% 15%;
+    --popover-foreground: 210 11% 10%;
 
     --primary: 4 66% 24%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 42% 72%;
-    --secondary-foreground: 210 11% 15%;
+    --secondary-foreground: 210 11% 10%;
 
-    --muted: 0 42% 92%;
-    --muted-foreground: 210 11% 25%;
+    --muted: 0 42% 85%;
+    --muted-foreground: 210 11% 20%;
 
-    --accent: 60 100% 80%;
+    --accent: 60 100% 70%;
     --accent-foreground: 4 66% 24%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 42% 90%;
-    --input: 0 42% 90%;
+    --border: 0 42% 85%;
+    --input: 0 42% 85%;
     --ring: 4 66% 24%;
 
     --radius: 0.5rem;
 
-    /* Kaachire Clinic Custom Colors */
+    /* Kaachire Clinic Custom Colors - Improved contrast */
     --clinic-primary: 4 66% 24%;    /* #85211d - darker for better contrast */
-    --clinic-secondary: 0 42% 72%;  /* #f4c2c2 */
-    --clinic-accent: 60 100% 80%;   /* #fff3a0 - darker yellow for better contrast */
+    --clinic-secondary: 0 42% 60%;  /* #c4a2a2 - darker pink for better visibility */
+    --clinic-accent: 60 100% 60%;   /* #ffec80 - darker yellow for better contrast */
   }
 
   .dark {
@@ -64,7 +64,7 @@ All colors MUST be HSL.
     --muted: 4 66% 30%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 60 100% 80%;
+    --accent: 60 100% 70%;
     --accent-foreground: 4 66% 24%;
 
     --destructive: 0 62.8% 30.6%;
@@ -83,7 +83,8 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
-    color: hsl(210 11% 15%); /* Darker text for better contrast */
+    color: hsl(210 11% 10%); /* Darker text for better contrast */
+    font-weight: 500; /* Slightly bolder text for better visibility */
   }
 }
 
@@ -115,13 +116,13 @@ All colors MUST be HSL.
 
 /* Professional Medical themed utilities */
 .clinic-gradient {
-  background: linear-gradient(135deg, #85211d 0%, #f4c2c2 100%);
+  background: linear-gradient(135deg, #85211d 0%, #c4a2a2 100%);
 }
 
 .clinic-card {
-  @apply bg-white shadow-xl rounded-2xl border border-[#f4c2c2]/20 hover:shadow-2xl transition-all duration-500 hover:border-[#f4c2c2]/40;
+  @apply bg-white shadow-xl rounded-2xl border border-[#85211d]/20 hover:shadow-2xl transition-all duration-500 hover:border-[#85211d]/40;
   animation: fadeIn 0.6s ease-out;
-  color: hsl(210 11% 15%); /* Ensure dark text in cards */
+  color: hsl(210 11% 10%); /* Darker text in cards */
 }
 
 .clinic-card:hover {
@@ -161,7 +162,7 @@ All colors MUST be HSL.
 
 /* Professional text effects */
 .text-gradient {
-  background: linear-gradient(135deg, #85211d, #f4c2c2);
+  background: linear-gradient(135deg, #85211d, #c4a2a2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -169,7 +170,7 @@ All colors MUST be HSL.
 
 /* Glassmorphism effect */
 .glass-effect {
-  background: rgba(244, 194, 194, 0.1);
+  background: rgba(132, 33, 29, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(244, 194, 194, 0.2);
+  border: 1px solid rgba(132, 33, 29, 0.2);
 }

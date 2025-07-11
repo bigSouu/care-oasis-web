@@ -1,10 +1,13 @@
+
 import { useState } from "react";
-import { Phone, Mail, Menu, X, ChevronDown, Search, MapPin } from "lucide-react";
+import { Phone, Mail, Menu, X, ChevronDown, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
+
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
   return <>
       {/* Top bar with contact info */}
       <div className="bg-[#85211d] text-white py-3 text-sm animate-slide-in">
@@ -44,39 +47,33 @@ const Navigation = () => {
               </Link>
               <div className="hidden md:ml-12 md:flex md:space-x-8">
                 <div className="relative group">
-                  <Link to="/" className="text-gray-700 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 flex items-center border-b-2 border-transparent hover:border-[#f4c2c2]">
+                  <Link to="/" className="text-gray-800 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 flex items-center border-b-2 border-transparent hover:border-[#85211d]">
                     HOME <ChevronDown className="h-4 w-4 ml-1 group-hover:rotate-180 transition-transform" />
                   </Link>
                 </div>
-                <Link to="/about" className="text-gray-600 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-[#f4c2c2]">ABOUT</Link>
+                <Link to="/about" className="text-gray-800 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-[#85211d]">ABOUT</Link>
                 <div className="relative group">
-                  <Link to="/services" className="text-gray-600 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 flex items-center border-b-2 border-transparent hover:border-[#f4c2c2]">
+                  <Link to="/services" className="text-gray-800 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 flex items-center border-b-2 border-transparent hover:border-[#85211d]">
                     SERVICES <ChevronDown className="h-4 w-4 ml-1 group-hover:rotate-180 transition-transform" />
                   </Link>
                 </div>
                 <div className="relative group">
-                  <Link to="/pages" className="text-gray-600 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 flex items-center border-b-2 border-transparent hover:border-[#f4c2c2]">
-                    PAGES <ChevronDown className="h-4 w-4 ml-1 group-hover:rotate-180 transition-transform" />
-                  </Link>
-                </div>
-                <div className="relative group">
-                  <Link to="/blog" className="text-gray-600 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 flex items-center border-b-2 border-transparent hover:border-[#f4c2c2]">
+                  <Link to="/blog" className="text-gray-800 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 flex items-center border-b-2 border-transparent hover:border-[#85211d]">
                     BLOG <ChevronDown className="h-4 w-4 ml-1 group-hover:rotate-180 transition-transform" />
                   </Link>
                 </div>
-                <Link to="/contact" className="text-gray-600 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-[#f4c2c2]">CONTACT</Link>
+                <Link to="/contact" className="text-gray-800 hover:text-[#85211d] px-4 py-2 text-sm font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-[#85211d]">CONTACT</Link>
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <Link to="/book-appointment">
-                <Button className="bg-gradient-to-r from-[#fffdd0] to-[#f4c2c2] hover:from-[#f4c2c2] hover:to-[#fffdd0] px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-red-900 hover:bg-red-800 text-red-950">
+                <Button className="bg-white text-[#85211d] border-2 border-[#85211d] hover:bg-[#85211d] hover:text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   BOOK APPOINTMENT →
                 </Button>
               </Link>
-              <Search className="h-6 w-6 text-gray-600 cursor-pointer hover:text-[#85211d] transition-colors hover:scale-110 transform duration-200" />
             </div>
             <div className="md:hidden flex items-center">
-              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-600 hover:text-[#85211d] transition-colors">
+              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-800 hover:text-[#85211d] transition-colors">
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
@@ -86,15 +83,14 @@ const Navigation = () => {
         {/* Mobile menu */}
         {mobileMenuOpen && <div className="md:hidden animate-slide-in">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-[#f4c2c2] shadow-lg">
-              <Link to="/" className="block px-4 py-3 text-base font-semibold text-gray-700 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">HOME</Link>
-              <Link to="/about" className="block px-4 py-3 text-base font-semibold text-gray-600 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">ABOUT</Link>
-              <Link to="/services" className="block px-4 py-3 text-base font-semibold text-gray-600 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">SERVICES</Link>
-              <Link to="/pages" className="block px-4 py-3 text-base font-semibold text-gray-600 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">PAGES</Link>
-              <Link to="/blog" className="block px-4 py-3 text-base font-semibold text-gray-600 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">BLOG</Link>
-              <Link to="/contact" className="block px-4 py-3 text-base font-semibold text-gray-600 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">CONTACT</Link>
+              <Link to="/" className="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">HOME</Link>
+              <Link to="/about" className="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">ABOUT</Link>
+              <Link to="/services" className="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">SERVICES</Link>
+              <Link to="/blog" className="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">BLOG</Link>
+              <Link to="/contact" className="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">CONTACT</Link>
               <div className="px-4 py-3">
                 <Link to="/book-appointment">
-                  <Button className="w-full bg-gradient-to-r from-[#fffdd0] to-[#f4c2c2] text-[#85211d] font-bold py-3 rounded-full">BOOK APPOINTMENT</Button>
+                  <Button className="w-full bg-white text-[#85211d] border-2 border-[#85211d] hover:bg-[#85211d] hover:text-white font-bold py-3 rounded-full transition-all duration-300">BOOK APPOINTMENT</Button>
                 </Link>
               </div>
             </div>
@@ -102,4 +98,5 @@ const Navigation = () => {
       </nav>
     </>;
 };
+
 export default Navigation;
