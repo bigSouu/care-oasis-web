@@ -7,58 +7,58 @@ import { Button } from "@/components/ui/button";
 const Blog = () => {
   const blogPosts = [
     {
-      title: "10 Tips for Maintaining Heart Health",
-      excerpt: "Learn simple yet effective ways to keep your heart healthy and reduce the risk of cardiovascular disease.",
-      author: "Dr. Sarah Johnson",
+      title: "Malaria Prevention in Ghana: Essential Tips for Rainy Season",
+      excerpt: "Learn effective strategies to protect yourself and your family from malaria during Ghana's rainy season, including proper use of mosquito nets and preventive measures.",
+      author: "Dr. Kwame Asante",
       date: "March 15, 2024",
-      category: "Cardiology",
-      readTime: "5 min read",
+      category: "Infectious Diseases",
+      readTime: "6 min read",
+      image: "https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Managing Hypertension in Ghanaian Communities",
+      excerpt: "Understanding blood pressure control in Ghana's context, including dietary modifications with local foods and accessible treatment options.",
+      author: "Dr. Akosua Osei",
+      date: "March 12, 2024",
+      category: "Cardiovascular Health",
+      readTime: "8 min read",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop"
     },
     {
-      title: "Understanding Mental Health in Modern Times",
-      excerpt: "Exploring the importance of mental health awareness and available treatment options in today's world.",
-      author: "Dr. Michael Chen",
-      date: "March 12, 2024",
-      category: "Mental Health",
-      readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop"
-    },
-    {
-      title: "The Future of Telemedicine",
-      excerpt: "How digital healthcare is revolutionizing patient care and making medical services more accessible.",
-      author: "Dr. Emily Rodriguez",
+      title: "Nutrition and Child Health: Combating Malnutrition in Ghana",
+      excerpt: "Addressing nutritional challenges in Ghanaian children with locally available foods and practical feeding strategies for parents.",
+      author: "Dr. Yaw Mensah",
       date: "March 8, 2024",
-      category: "Technology",
-      readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop"
-    },
-    {
-      title: "Nutrition Guidelines for Healthy Living",
-      excerpt: "Expert advice on maintaining a balanced diet and making informed food choices for optimal health.",
-      author: "Dr. James Wilson",
-      date: "March 5, 2024",
-      category: "Nutrition",
-      readTime: "8 min read",
+      category: "Pediatric Care",
+      readTime: "7 min read",
       image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop"
     },
     {
-      title: "Preventive Care: Your First Line of Defense",
-      excerpt: "Understanding the importance of regular checkups and preventive measures in maintaining good health.",
-      author: "Dr. Lisa Thompson",
+      title: "Diabetes Management with Traditional Ghanaian Foods",
+      excerpt: "How to manage diabetes effectively using traditional Ghanaian foods and lifestyle modifications suitable for local communities.",
+      author: "Dr. Ama Darko",
+      date: "March 5, 2024",
+      category: "Diabetes Care",
+      readTime: "9 min read",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Maternal Health in Rural Ghana: Antenatal Care Essentials",
+      excerpt: "Important guidelines for expectant mothers in rural Ghana, including antenatal care schedules and birth preparedness.",
+      author: "Dr. Efua Amponsah",
       date: "March 1, 2024",
-      category: "Preventive Care",
-      readTime: "5 min read",
+      category: "Maternal Health",
+      readTime: "10 min read",
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop"
     },
     {
-      title: "Managing Chronic Conditions Effectively",
-      excerpt: "Strategies and tips for living well with chronic health conditions while maintaining quality of life.",
-      author: "Dr. Robert Davis",
+      title: "Mental Health Awareness in Ghanaian Society",
+      excerpt: "Breaking stigma around mental health in Ghana and promoting accessible mental health resources in local communities.",
+      author: "Dr. Kofi Boateng",
       date: "February 28, 2024",
-      category: "Chronic Care",
-      readTime: "9 min read",
-      image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop"
+      category: "Mental Health",
+      readTime: "6 min read",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop"
     }
   ];
 
@@ -73,7 +73,7 @@ const Blog = () => {
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">Health Blog</h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Stay informed with the latest health news, medical insights, and expert advice 
-              from our team of healthcare professionals.
+              tailored for Ghanaian communities and healthcare needs.
             </p>
           </div>
         </div>
@@ -128,7 +128,7 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
-            <p className="text-lg text-gray-600">Expert insights on health and wellness</p>
+            <p className="text-lg text-gray-600">Expert insights on health and wellness for Ghanaian communities</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
             {blogPosts.slice(1).map((post, index) => (
