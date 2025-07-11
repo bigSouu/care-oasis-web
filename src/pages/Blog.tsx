@@ -13,7 +13,7 @@ const Blog = () => {
       date: "March 15, 2024",
       category: "Infectious Diseases",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
     },
     {
       title: "Managing Hypertension in Ghanaian Communities",
@@ -59,6 +59,87 @@ const Blog = () => {
       category: "Mental Health",
       readTime: "6 min read",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Cholera Prevention During Ghana's Rainy Season",
+      excerpt: "Essential sanitation practices and water safety measures to prevent cholera outbreaks in Ghanaian communities during heavy rains.",
+      author: "Dr. Nana Adjei",
+      date: "February 25, 2024",
+      category: "Public Health",
+      readTime: "5 min read",
+      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Traditional Medicine and Modern Healthcare in Ghana",
+      excerpt: "Exploring the integration of traditional healing practices with modern medical care in Ghana's healthcare system.",
+      author: "Dr. Kweku Mensah",
+      date: "February 22, 2024",
+      category: "Traditional Medicine",
+      readTime: "8 min read",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Preventing Buruli Ulcer in Ghana's Endemic Areas",
+      excerpt: "Understanding Buruli ulcer transmission and prevention strategies for communities in Ghana's endemic regions.",
+      author: "Dr. Akua Serwaa",
+      date: "February 18, 2024",
+      category: "Infectious Diseases",
+      readTime: "7 min read",
+      image: "https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Family Planning and Reproductive Health in Ghana",
+      excerpt: "Comprehensive guide to family planning options and reproductive health services available across Ghana.",
+      author: "Dr. Abena Okyere",
+      date: "February 15, 2024",
+      category: "Reproductive Health",
+      readTime: "9 min read",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Managing Sickle Cell Disease in Ghana",
+      excerpt: "Treatment strategies and lifestyle modifications for managing sickle cell disease in Ghana's healthcare context.",
+      author: "Dr. Samuel Amoah",
+      date: "February 12, 2024",
+      category: "Genetic Disorders",
+      readTime: "10 min read",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Clean Water Access and Health in Rural Ghana",
+      excerpt: "The critical link between clean water access and community health outcomes in rural Ghanaian villages.",
+      author: "Dr. Yaa Asantewaa",
+      date: "February 8, 2024",
+      category: "Public Health",
+      readTime: "6 min read",
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Treating Neglected Tropical Diseases in Ghana",
+      excerpt: "Comprehensive approach to diagnosing and treating common neglected tropical diseases affecting Ghanaian communities.",
+      author: "Dr. Kwame Nkrumah",
+      date: "February 5, 2024",
+      category: "Tropical Medicine",
+      readTime: "11 min read",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Eye Care and Vision Health in Ghana",
+      excerpt: "Preventing and treating common eye conditions in Ghana, including cataract, glaucoma, and river blindness prevention.",
+      author: "Dr. Adwoa Appiah",
+      date: "February 1, 2024",
+      category: "Ophthalmology",
+      readTime: "7 min read",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&h=400&fit=crop"
+    },
+    {
+      title: "Community Health Workers: Ghana's Healthcare Heroes",
+      excerpt: "The vital role of community health workers in extending healthcare access to remote areas across Ghana.",
+      author: "Dr. Kofi Asante",
+      date: "January 28, 2024",
+      category: "Community Health",
+      readTime: "8 min read",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop"
     }
   ];
 
