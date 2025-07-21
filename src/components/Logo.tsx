@@ -24,7 +24,7 @@ const Logo = ({ size = "normal", animated = true }: { size?: "small" | "normal" 
     <div className={`flex items-center space-x-3 ${animated ? 'group' : ''}`}>
       <div className={`relative ${animated ? 'group-hover:scale-105 transition-transform duration-300' : ''}`}>
         <img 
-          src="/lovable-uploads/7f51a054-4244-4460-a436-6f2d281b79d3.png" 
+          src="/lovable-uploads/9518e27e-4134-4214-8343-fd324e83fdb9.png" 
           alt="Kaachire Clinic Logo" 
           className={`${imgSizeClasses[size]} w-auto object-contain ${animated ? 'group-hover:animate-pulse-slow' : ''}`}
         />
