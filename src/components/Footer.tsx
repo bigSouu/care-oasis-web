@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#85211d] text-white py-16 relative overflow-hidden">
+    <footer className="bg-[#9a2b27] text-white py-16 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 animate-float">
