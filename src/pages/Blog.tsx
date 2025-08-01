@@ -9,7 +9,7 @@ const Blog = () => {
     {
       title: "Malaria Prevention in Ghana: Essential Tips for Rainy Season",
       excerpt: "Learn effective strategies to protect yourself and your family from malaria during Ghana's rainy season, including proper use of mosquito nets and preventive measures.",
-      author: "Dr. Kwame Asante",
+      author: "Dr. Ernest Anim Boateng",
       date: "March 15, 2024",
       category: "Infectious Diseases",
       readTime: "6 min read",
@@ -18,7 +18,7 @@ const Blog = () => {
     {
       title: "Managing Hypertension in Ghanaian Communities",
       excerpt: "Understanding blood pressure control in Ghana's context, including dietary modifications with local foods and accessible treatment options.",
-      author: "Dr. Akosua Osei",
+      author: "Dr. Ernest Anim Boateng",
       date: "March 12, 2024",
       category: "Cardiovascular Health",
       readTime: "8 min read",
@@ -27,7 +27,7 @@ const Blog = () => {
     {
       title: "Nutrition and Child Health: Combating Malnutrition in Ghana",
       excerpt: "Addressing nutritional challenges in Ghanaian children with locally available foods and practical feeding strategies for parents.",
-      author: "Dr. Yaw Mensah",
+      author: "Dr. Ernest Anim Boateng",
       date: "March 8, 2024",
       category: "Pediatric Care",
       readTime: "7 min read",
@@ -36,7 +36,7 @@ const Blog = () => {
     {
       title: "Diabetes Management with Traditional Ghanaian Foods",
       excerpt: "How to manage diabetes effectively using traditional Ghanaian foods and lifestyle modifications suitable for local communities.",
-      author: "Dr. Ama Darko",
+      author: "Dr. Ernest Anim Boateng",
       date: "March 5, 2024",
       category: "Diabetes Care",
       readTime: "9 min read",
@@ -45,7 +45,7 @@ const Blog = () => {
     {
       title: "Maternal Health in Rural Ghana: Antenatal Care Essentials",
       excerpt: "Important guidelines for expectant mothers in rural Ghana, including antenatal care schedules and birth preparedness.",
-      author: "Dr. Efua Amponsah",
+      author: "Dr. Ernest Anim Boateng",
       date: "March 1, 2024",
       category: "Maternal Health",
       readTime: "10 min read",
@@ -54,7 +54,7 @@ const Blog = () => {
     {
       title: "Mental Health Awareness in Ghanaian Society",
       excerpt: "Breaking stigma around mental health in Ghana and promoting accessible mental health resources in local communities.",
-      author: "Dr. Kofi Boateng",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 28, 2024",
       category: "Mental Health",
       readTime: "6 min read",
@@ -63,7 +63,7 @@ const Blog = () => {
     {
       title: "Cholera Prevention During Ghana's Rainy Season",
       excerpt: "Essential sanitation practices and water safety measures to prevent cholera outbreaks in Ghanaian communities during heavy rains.",
-      author: "Dr. Nana Adjei",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 25, 2024",
       category: "Public Health",
       readTime: "5 min read",
@@ -72,7 +72,7 @@ const Blog = () => {
     {
       title: "Traditional Medicine and Modern Healthcare in Ghana",
       excerpt: "Exploring the integration of traditional healing practices with modern medical care in Ghana's healthcare system.",
-      author: "Dr. Kweku Mensah",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 22, 2024",
       category: "Traditional Medicine",
       readTime: "8 min read",
@@ -81,7 +81,7 @@ const Blog = () => {
     {
       title: "Preventing Buruli Ulcer in Ghana's Endemic Areas",
       excerpt: "Understanding Buruli ulcer transmission and prevention strategies for communities in Ghana's endemic regions.",
-      author: "Dr. Akua Serwaa",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 18, 2024",
       category: "Infectious Diseases",
       readTime: "7 min read",
@@ -90,7 +90,7 @@ const Blog = () => {
     {
       title: "Family Planning and Reproductive Health in Ghana",
       excerpt: "Comprehensive guide to family planning options and reproductive health services available across Ghana.",
-      author: "Dr. Abena Okyere",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 15, 2024",
       category: "Reproductive Health",
       readTime: "9 min read",
@@ -99,7 +99,7 @@ const Blog = () => {
     {
       title: "Managing Sickle Cell Disease in Ghana",
       excerpt: "Treatment strategies and lifestyle modifications for managing sickle cell disease in Ghana's healthcare context.",
-      author: "Dr. Samuel Amoah",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 12, 2024",
       category: "Genetic Disorders",
       readTime: "10 min read",
@@ -108,7 +108,7 @@ const Blog = () => {
     {
       title: "Clean Water Access and Health in Rural Ghana",
       excerpt: "The critical link between clean water access and community health outcomes in rural Ghanaian villages.",
-      author: "Dr. Yaa Asantewaa",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 8, 2024",
       category: "Public Health",
       readTime: "6 min read",
@@ -117,7 +117,7 @@ const Blog = () => {
     {
       title: "Treating Neglected Tropical Diseases in Ghana",
       excerpt: "Comprehensive approach to diagnosing and treating common neglected tropical diseases affecting Ghanaian communities.",
-      author: "Dr. Kwame Nkrumah",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 5, 2024",
       category: "Tropical Medicine",
       readTime: "11 min read",
@@ -126,7 +126,7 @@ const Blog = () => {
     {
       title: "Eye Care and Vision Health in Ghana",
       excerpt: "Preventing and treating common eye conditions in Ghana, including cataract, glaucoma, and river blindness prevention.",
-      author: "Dr. Adwoa Appiah",
+      author: "Dr. Ernest Anim Boateng",
       date: "February 1, 2024",
       category: "Ophthalmology",
       readTime: "7 min read",
@@ -135,7 +135,7 @@ const Blog = () => {
     {
       title: "Community Health Workers: Ghana's Healthcare Heroes",
       excerpt: "The vital role of community health workers in extending healthcare access to remote areas across Ghana.",
-      author: "Dr. Kofi Asante",
+      author: "Dr. Ernest Anim Boateng",
       date: "January 28, 2024",
       category: "Community Health",
       readTime: "8 min read",
