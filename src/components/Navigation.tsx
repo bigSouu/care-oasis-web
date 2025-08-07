@@ -1,12 +1,21 @@
 
 import { useState } from "react";
-import { Phone, Mail, Menu, X, ChevronDown, MapPin } from "lucide-react";
+import { Phone, Mail, Menu, X, ChevronDown, MapPin, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import Logo from "./Logo";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user, signOut } = useAuth();
   
   return <>
       {/* Top bar with contact info */}
@@ -71,6 +80,34 @@ const Navigation = () => {
                   BOOK APPOINTMENT →
                 </Button>
               </Link>
+              {user ? (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" className="relative h-10 w-10 rounded-full bg-clinic-light hover:bg-clinic-light/80">
+                      <User className="h-5 w-5 text-clinic-primary" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56" align="end" forceMount>
+                    <div className="flex flex-col space-y-1 p-2">
+                      <p className="text-sm font-medium leading-none">{user.email}</p>
+                      <p className="text-xs leading-none text-muted-foreground">
+                        Welcome back!
+                      </p>
+                    </div>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem onClick={signOut} className="text-red-600 focus:text-red-600">
+                      <LogOut className="mr-2 h-4 w-4" />
+                      <span>Sign out</span>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link to="/auth">
+                  <Button variant="outline" className="border-clinic-primary text-clinic-primary hover:bg-clinic-primary hover:text-white">
+                    Sign In
+                  </Button>
+                </Link>
+              )}
             </div>
             <div className="md:hidden flex items-center">
               <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-800 hover:text-[#85211d] transition-colors">
@@ -88,10 +125,32 @@ const Navigation = () => {
               <Link to="/services" className="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">SERVICES</Link>
               <Link to="/blog" className="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">BLOG</Link>
               <Link to="/contact" className="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-[#85211d] hover:bg-[#f4c2c2]/10 rounded-lg transition-all">CONTACT</Link>
-              <div className="px-4 py-3">
+              <div className="px-4 py-3 space-y-3">
                 <Link to="/book-appointment">
                   <Button className="w-full bg-white text-[#85211d] border-2 border-[#85211d] hover:bg-[#85211d] hover:text-white font-bold py-3 rounded-full transition-all duration-300">BOOK APPOINTMENT</Button>
                 </Link>
+                {user ? (
+                  <div className="space-y-2">
+                    <div className="px-4 py-2 bg-clinic-light rounded-lg">
+                      <p className="text-sm font-medium text-clinic-primary">{user.email}</p>
+                      <p className="text-xs text-gray-600">Welcome back!</p>
+                    </div>
+                    <Button 
+                      onClick={signOut} 
+                      variant="outline" 
+                      className="w-full border-red-200 text-red-600 hover:bg-red-50"
+                    >
+                      <LogOut className="mr-2 h-4 w-4" />
+                      Sign Out
+                    </Button>
+                  </div>
+                ) : (
+                  <Link to="/auth">
+                    <Button variant="outline" className="w-full border-clinic-primary text-clinic-primary hover:bg-clinic-primary hover:text-white">
+                      Sign In
+                    </Button>
+                  </Link>
+                )}
               </div>
             </div>
           </div>}
