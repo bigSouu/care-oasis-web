@@ -52,6 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'clinic-primary': 'hsl(var(--clinic-primary))',
+				'clinic-secondary': 'hsl(var(--clinic-secondary))',
+				'clinic-accent': 'hsl(var(--clinic-accent))',
+				'clinic-light': 'hsl(var(--clinic-secondary) / 0.2)',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
