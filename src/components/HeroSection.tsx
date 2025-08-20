@@ -1,7 +1,12 @@
-import { Heart, Facebook, Instagram, Youtube, Twitter, Shield, Award, Users } from "lucide-react";
+import { Heart, Facebook, Instagram, Youtube, Twitter, Shield, Award, Users, LogIn, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import AuthDialog from "./AuthDialog";
 const HeroSection = () => {
+  const { user } = useAuth();
+  const [authDialogOpen, setAuthDialogOpen] = useState(false);
   return <section id="home" className="relative min-h-screen clinic-gradient text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
@@ -88,6 +93,29 @@ const HeroSection = () => {
               </Link>
             </div>
 
+            {/* Authentication Buttons */}
+            {!user && (
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{
+                animationDelay: '1.0s'
+              }}>
+                <Button 
+                  onClick={() => setAuthDialogOpen(true)}
+                  className="bg-white/20 backdrop-blur-sm border-2 border-white hover:bg-white hover:text-[#85211d] text-white px-6 py-3 text-base font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+                >
+                  <LogIn className="mr-2 h-5 w-5" />
+                  Sign In
+                </Button>
+                <Button 
+                  onClick={() => setAuthDialogOpen(true)}
+                  variant="outline" 
+                  className="border-2 border-white/50 bg-transparent text-white hover:bg-white/10 backdrop-blur-sm px-6 py-3 text-base font-semibold rounded-full transition-all duration-300"
+                >
+                  <UserPlus className="mr-2 h-5 w-5" />
+                  Register
+                </Button>
+              </div>
+            )}
+
             {/* Doctor Info */}
             <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 animate-fade-in border border-white/30" style={{
             animationDelay: '1.2s'
@@ -133,6 +161,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+      <AuthDialog open={authDialogOpen} onOpenChange={setAuthDialogOpen} />
     </section>;
 };
 export default HeroSection;

@@ -12,7 +12,6 @@ import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import BookAppointment from "./pages/BookAppointment";
-import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,7 +24,6 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/auth" element={<Auth />} />
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />

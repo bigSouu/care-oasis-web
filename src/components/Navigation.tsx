@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Phone, Mail, Menu, X, ChevronDown, MapPin, User, LogOut } from "lucide-react";
+import { Phone, Mail, Menu, X, ChevronDown, MapPin, User, LogOut, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
@@ -12,9 +12,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Logo from "./Logo";
+import AuthDialog from "./AuthDialog";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [authDialogOpen, setAuthDialogOpen] = useState(false);
   const { user, signOut } = useAuth();
   
   return <>
@@ -102,11 +104,14 @@ const Navigation = () => {
                   </DropdownMenuContent>
                 </DropdownMenu>
               ) : (
-                <Link to="/auth">
-                  <Button variant="outline" className="border-clinic-primary text-clinic-primary hover:bg-clinic-primary hover:text-white">
-                    Sign In
-                  </Button>
-                </Link>
+                <Button 
+                  onClick={() => setAuthDialogOpen(true)}
+                  variant="outline" 
+                  className="border-clinic-primary text-clinic-primary hover:bg-clinic-primary hover:text-white"
+                >
+                  <LogIn className="mr-2 h-4 w-4" />
+                  Sign In
+                </Button>
               )}
             </div>
             <div className="md:hidden flex items-center">
@@ -145,16 +150,21 @@ const Navigation = () => {
                     </Button>
                   </div>
                 ) : (
-                  <Link to="/auth">
-                    <Button variant="outline" className="w-full border-clinic-primary text-clinic-primary hover:bg-clinic-primary hover:text-white">
-                      Sign In
-                    </Button>
-                  </Link>
+                  <Button 
+                    onClick={() => setAuthDialogOpen(true)}
+                    variant="outline" 
+                    className="w-full border-clinic-primary text-clinic-primary hover:bg-clinic-primary hover:text-white"
+                  >
+                    <LogIn className="mr-2 h-4 w-4" />
+                    Sign In
+                  </Button>
                 )}
               </div>
             </div>
           </div>}
       </nav>
+      
+      <AuthDialog open={authDialogOpen} onOpenChange={setAuthDialogOpen} />
     </>;
 };
 
