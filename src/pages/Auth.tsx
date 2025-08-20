@@ -173,9 +173,9 @@ const Auth = () => {
 
               <Card className="clinic-card border-0 bg-card/80 backdrop-blur-sm">
                 <CardHeader className="space-y-1 text-center">
-                  <CardTitle className="text-2xl font-bold text-primary">Welcome</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-primary">Patient Account</CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    Sign in to your account or create a new one
+                    Sign in to your account or register as a patient to book appointments
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -191,7 +191,7 @@ const Auth = () => {
                         value="signup"
                         className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                       >
-                        Sign Up
+                        Register
                       </TabsTrigger>
                     </TabsList>
 
