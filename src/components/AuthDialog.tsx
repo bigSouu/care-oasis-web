@@ -65,10 +65,6 @@ const AuthDialog = ({ open, onOpenChange }: AuthDialogProps) => {
         });
       }
     } else {
-      toast({
-        title: "Check your email",
-        description: "We've sent you a confirmation link to complete your registration.",
-      });
       onOpenChange(false);
     }
 
